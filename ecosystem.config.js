@@ -2,7 +2,7 @@ module.exports = {
     apps: [{
         name: "app",
         script: "app.js"
-    }]
+    }],
     deploy: {
         sand: {
             key: '~/.ssh/id_rsa.pub',
@@ -11,7 +11,7 @@ module.exports = {
             ref: 'origin/master',
             repo: 'git@github.com:hannah10e/hello-world.git',
             path: "/home/dev/sand/hello-world",
-            'post-deploy': "pm2 start ecosystem.config.js --only sand"
+            'post-deploy': "pm2 start ecosystem.config.js"
         }
     }
 }
