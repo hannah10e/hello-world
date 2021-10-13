@@ -45,8 +45,6 @@ jobs:
         # run tests
       - name: set up SSH
         run: |
-          echo "printing pub key"
-          echo "$SSH_PRIVATE_KEY"
           mkdir -p ~/.ssh/
           echo "$SSH_PRIVATE_KEY" > ~/.ssh/id_rsa
           sudo chmod 600 ~/.ssh/id_rsa
@@ -56,6 +54,8 @@ jobs:
           ssh-add ~/.ssh/id_rsa
           echo "Test ssh connection"
           ssh -o StrictHostKeyChecking=no -T dev@sand.oshcut.com
+          sudo npm i -g pm2
+          pm2 deploy sand update
 #          echo "Printing pub file"
 #          cat ~/.ssh/id_rsa.pub
 #          echo "Listing folder"
@@ -63,9 +63,3 @@ jobs:
         shell: bash
         env:
           SSH_PRIVATE_KEY: ${{secrets.SSH_PRIVATE_KEY}}
-
-      - name: Install PM2
-        run: sudo npm i -g pm2
-
-      - name: Deploy
-        run: pm2 deploy sand update
