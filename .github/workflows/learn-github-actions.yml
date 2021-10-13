@@ -35,12 +35,9 @@ jobs:
         # run tests
       - name: set up SSH
         run: |
-          sudo mkdir -p ~/.ssh/id_rsa
-          sudo cp $SSH_PRIVATE_KEY ~/.ssh/id_rsa
-          chmod 700 ~/.ssh && chmod 600 ~/.ssh/*
-          eval `ssh-agent -s`
-          ssh-keygen -yf ~/.ssh/id_rsa >> ~/.ssh/id_rsa.pub
-          ssh-add ~/.ssh/id_rsa
+          mkdir -p ~/.ssh/
+          echo "$SSH_PRIVATE_KEY" > ./id_rsa
+          sudo chmod 600 ./id_rsa
         shell: bash
         env:
           SSH_PRIVATE_KEY: ${{secrets.SSH_PRIVATE_KEY}}
