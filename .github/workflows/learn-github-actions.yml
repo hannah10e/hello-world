@@ -35,7 +35,7 @@ jobs:
         # run tests
       - name: set up SSH
         run: |
-          mkdir -p ~/.ssh/
+          sudo mkdir -p ~/.ssh/
           sudo cp $SSH_PRIVATE_KEY ~/.ssh/id_rsa
           chmod 700 ~/.ssh && chmod 600 ~/.ssh/*
           eval `ssh-agent -s`
