@@ -36,9 +36,11 @@ jobs:
       - name: set up SSH
         run: |
           mkdir -p ~/.ssh/
-          echo "$SSH_PRIVATE_KEY" > ./deploy.key
-          sudo chmod 600 ./deploy.key
-          echo "$SSH_KNOWN_HOSTS" > ~/.ssh/known_hosts
+          cp $SSH_PRIVATE_KEY ~/.ssh/id_rsa
+          chmod 700 ~/.ssh && chmod 600 ~/.ssh/*
+          eval `ssh-agent -s`
+          ssh-keygen -yf ~/.ssh/id_rsa >> ~/.ssh/id_rsa.pub
+          ssh-add ~/.ssh/id_rsa
         shell: bash
         env:
           SSH_PRIVATE_KEY: ${{secrets.SSH_PRIVATE_KEY}}
