@@ -48,4 +48,4 @@ jobs:
         run: npm i pm2
 
       - name: Deploy
-        run: pm2 deploy ecosystem.config.js staging
+        run: pm2 deploy sand
