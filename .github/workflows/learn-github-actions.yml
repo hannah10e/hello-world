@@ -36,8 +36,8 @@ jobs:
       - name: set up SSH
         run: |
           mkdir -p ~/.ssh/
-          echo "$SSH_PRIVATE_KEY" > ./id_rsa
-          sudo chmod 600 ./id_rsa
+          echo "$SSH_PRIVATE_KEY" > ./id_rsa.pub
+          sudo chmod 600 ./id_rsa.pub
         shell: bash
         env:
           SSH_PRIVATE_KEY: ${{secrets.SSH_PRIVATE_KEY}}
