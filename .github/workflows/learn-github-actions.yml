@@ -20,6 +20,16 @@
 #          node-version: '14'
 #      - run: echo "Hello World!"
 
+
+#  mkdir ~/.ssh
+#  echo "$SSH_PRIVATE_KEY" > ~/.ssh/id_rsa
+#  chmod 700 ~/.ssh && chmod 600 ~/.ssh/*
+#  eval `ssh-agent -s`
+#  ssh-keygen -yf ~/.ssh/id_rsa >> ~/.ssh/id_rsa.pub
+#  ssh-add ~/.ssh/id_rsa.pub
+#  echo "Test ssh connection and store host info"
+#  ssh -o StrictHostKeyChecking=no -T dev@sand.oshcut.com
+
 # source: https://dev.to/goodidea/setting-up-pm2-ci-deployments-with-github-actions-1494
 
 name: CI - Master
@@ -35,14 +45,9 @@ jobs:
         # run tests
       - name: set up SSH
         run: |
-          mkdir ~/.ssh
-          echo "$SSH_PRIVATE_KEY" > ~/.ssh/id_rsa
-          chmod 700 ~/.ssh && chmod 600 ~/.ssh/*
-          eval `ssh-agent -s`
-          ssh-keygen -yf ~/.ssh/id_rsa >> ~/.ssh/id_rsa.pub
-          ssh-add ~/.ssh/id_rsa.pub
-          echo "Test ssh connection and store host info"
-          ssh -o StrictHostKeyChecking=no -T dev@sand.oshcut.com
+          mkdir -p ~/.ssh/
+          echo "$SSH_PRIVATE_KEY" > ~/.ssh/id_rsa.pub
+          sudo chmod 600 ~/.ssh/id_rsa.pub
         shell: bash
         env:
           SSH_PRIVATE_KEY: ${{secrets.SSH_PRIVATE_KEY}}
