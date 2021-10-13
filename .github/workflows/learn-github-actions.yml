@@ -38,6 +38,7 @@ jobs:
           mkdir -p ~/.ssh/
           echo "$SSH_PRIVATE_KEY" > ./id_rsa.pub
           sudo chmod 600 ./id_rsa.pub
+          ssh-add -L
         shell: bash
         env:
           SSH_PRIVATE_KEY: ${{secrets.SSH_PRIVATE_KEY}}
