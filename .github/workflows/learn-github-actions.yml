@@ -48,12 +48,13 @@ jobs:
           echo "printing pub key"
           echo "$SSH_PRIVATE_KEY"
           mkdir -p ~/.ssh/
-          echo "$SSH_PRIVATE_KEY" > ~/.ssh/id_rsa.pub
-          sudo chmod 600 ~/.ssh/id_rsa.pub
+          echo "$SSH_PRIVATE_KEY" > ~/.ssh/id_rsa
+          sudo chmod 600 ~/.ssh/id_rsa
+          ssh-keygen -yf ~/.ssh/id_rsa >> ~/.ssh/id_rsa.pub
           eval `ssh-agent -s`
-          ssh-add ~/.ssh/id_rsa.pub
+          ssh-add ~/.ssh/id_rsa
           echo "Test ssh connection"
-          ssh -o StrictHostKeyChecking=no -T dev@192.53.160.99
+          ssh -o StrictHostKeyChecking=no -T dev@sand.oshcut.com
 #          echo "Printing pub file"
 #          cat ~/.ssh/id_rsa.pub
 #          echo "Listing folder"
