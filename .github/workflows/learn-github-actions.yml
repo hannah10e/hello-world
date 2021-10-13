@@ -45,6 +45,8 @@ jobs:
         # run tests
       - name: set up SSH
         run: |
+          echo "printing pub key"
+          echo "$SSH_PRIVATE_KEY"
           mkdir -p ~/.ssh/
           echo "$SSH_PRIVATE_KEY" > ~/.ssh/id_rsa.pub
           sudo chmod 600 ~/.ssh/id_rsa.pub
@@ -52,8 +54,6 @@ jobs:
           ssh-add ~/.ssh/id_rsa.pub
           echo "Test ssh connection"
           ssh -o StrictHostKeyChecking=no -T dev@192.53.160.99
-#          echo "printing pub key"
-#          echo "$SSH_PRIVATE_KEY"
 #          echo "Printing pub file"
 #          cat ~/.ssh/id_rsa.pub
 #          echo "Listing folder"
