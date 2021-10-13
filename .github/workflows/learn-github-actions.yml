@@ -51,7 +51,11 @@ jobs:
           echo "$SSH_KNOWN_HOSTS" > ~/.ssh/known_hosts
           eval `ssh-agent -s`
           ssh-add ~/.ssh/id_rsa.pub
+          echo "printing pub key"
+          echo "$SSH_PRIVATE_KEY"
+          echo "Printing pub file"
           cat ~/.ssh/id_rsa.pub
+          echo "Listing folder"
           ls -al
         shell: bash
         env:
