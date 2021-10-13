@@ -36,7 +36,7 @@ jobs:
       - name: set up SSH
         run: |
           mkdir -p ~/.ssh/
-          cp $SSH_PRIVATE_KEY ~/.ssh/id_rsa
+          sudo cp $SSH_PRIVATE_KEY ~/.ssh/id_rsa
           chmod 700 ~/.ssh && chmod 600 ~/.ssh/*
           eval `ssh-agent -s`
           ssh-keygen -yf ~/.ssh/id_rsa >> ~/.ssh/id_rsa.pub
