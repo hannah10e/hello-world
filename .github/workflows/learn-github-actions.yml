@@ -50,11 +50,12 @@ jobs:
           sudo chmod 600 ~/.ssh/id_rsa.pub
           echo "$SSH_KNOWN_HOSTS" > ~/.ssh/known_hosts
           eval `ssh-agent -s`
-          ssh-add -L
+          ssh-add ~/.ssh/id_rsa.pub
+          cat ~/.ssh/id_rsa.pub
+          ls -al
         shell: bash
         env:
           SSH_PRIVATE_KEY: ${{secrets.SSH_PRIVATE_KEY}}
-          SSH_PUBLIC_KEY: ${{secrets.SSH_PUBLIC_KEY}}
           SSH_KNOWN_HOSTS: ${{secrets.SSH_KNOWN_HOSTS}}
 
       - name: Install PM2
