@@ -1,12 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="d2e5ffa7-fa6a-4278-a4d1-f92953a66788" name="Changes" comment="added deploy action">
-      <change afterPath="$PROJECT_DIR$/.github/workflows/dev.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.github/workflows/learn-github-actions.yml" beforeDir="false" afterPath="$PROJECT_DIR$/.github/workflows/master.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+    <list default="true" id="d2e5ffa7-fa6a-4278-a4d1-f92953a66788" name="Changes" comment="added deploy action tests">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -55,6 +51,7 @@
       <workItem from="1634055287228" duration="3205000" />
       <workItem from="1634145640916" duration="10842000" />
       <workItem from="1634162251859" duration="2793000" />
+      <workItem from="1634223722361" duration="1788000" />
     </task>
     <task id="LOCAL-00001" summary="initial commit">
       <created>1633902669494</created>
@@ -329,7 +326,28 @@
       <option name="project" value="LOCAL" />
       <updated>1634156429448</updated>
     </task>
-    <option name="localTasksCounter" value="40" />
+    <task id="LOCAL-00040" summary="added deploy action tests">
+      <created>1634223896914</created>
+      <option name="number" value="00040" />
+      <option name="presentableId" value="LOCAL-00040" />
+      <option name="project" value="LOCAL" />
+      <updated>1634223896914</updated>
+    </task>
+    <task id="LOCAL-00041" summary="added deploy action tests">
+      <created>1634223979515</created>
+      <option name="number" value="00041" />
+      <option name="presentableId" value="LOCAL-00041" />
+      <option name="project" value="LOCAL" />
+      <updated>1634223979515</updated>
+    </task>
+    <task id="LOCAL-00042" summary="added deploy action tests">
+      <created>1634225379149</created>
+      <option name="number" value="00042" />
+      <option name="presentableId" value="LOCAL-00042" />
+      <option name="project" value="LOCAL" />
+      <updated>1634225379149</updated>
+    </task>
+    <option name="localTasksCounter" value="43" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -353,7 +371,8 @@
     <MESSAGE value="added actions yml file" />
     <MESSAGE value="added test to actions yml file" />
     <MESSAGE value="added deploy action" />
-    <option name="LAST_COMMIT_MESSAGE" value="added deploy action" />
+    <MESSAGE value="added deploy action tests" />
+    <option name="LAST_COMMIT_MESSAGE" value="added deploy action tests" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
