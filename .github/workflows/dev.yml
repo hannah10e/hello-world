@@ -1,16 +1,28 @@
-# source: https://dev.to/goodidea/setting-up-pm2-ci-deployments-with-github-actions-1494
-
-name: CI - Master
+name: CI - Dev
 on:
   push:
-    branches: [master]
+    branches: [dev]
 
 jobs:
-  deploy:
+  test:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-        # run tests
+      - name: Test
+        run: yarn run test
+
+  prettier:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Prettier
+      run: yarn run prettier:check
+
+  deploy:
+    needs: [ test, prettier ]
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
       - name: Deploy
         run: |
           mkdir -p ~/.ssh/

@@ -4,7 +4,8 @@
   "description": "learning pm2 deployment",
   "main": "app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Success Test\" && exit 0",
+    "prettier:check": "prettier --check \"./src/**/*.{ts,tsx,js,css,md,json,md,css,scss,html}\""
   },
   "repository": {
     "type": "git",
@@ -15,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/hannah10e/hello-world/issues"
   },
-  "homepage": "https://github.com/hannah10e/hello-world#readme"
+  "homepage": "https://github.com/hannah10e/hello-world#readme",
+  "devDependencies": {
+    "prettier": "2.3.2"
+  }
 }

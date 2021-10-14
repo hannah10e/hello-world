@@ -1,0 +1,44 @@
+# sources: https://dev.to/goodidea/setting-up-pm2-ci-deployments-with-github-actions-1494
+#          https://docs.github.com/en/actions/learn-github-actions/workflow-syntax-for-github-actions
+
+name: CI - Master
+on:
+  push:
+    branches: [master]
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Test
+        run: yarn run test
+
+  prettier:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Prettier
+      run: yarn run prettier:check
+
+  deploy:
+    needs: [test, prettier]
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Deploy
+        run: |
+          mkdir -p ~/.ssh/
+          echo "$SSH_PRIVATE_KEY" > ~/.ssh/id_rsa
+          sudo chmod 600 ~/.ssh/id_rsa
+          ssh-keygen -yf ~/.ssh/id_rsa >> ~/.ssh/id_rsa.pub
+          sudo chmod 600 ~/.ssh/id_rsa.pub
+          eval `ssh-agent -s`
+          ssh-add ~/.ssh/id_rsa
+          echo "Test ssh connection"
+          ssh -o StrictHostKeyChecking=no -T dev@sand.oshcut.com
+          sudo npm i -g pm2
+          pm2 deploy sand update
+        shell: bash
+        env:
+          SSH_PRIVATE_KEY: ${{secrets.SSH_PRIVATE_KEY}}
