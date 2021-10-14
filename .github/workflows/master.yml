@@ -19,7 +19,9 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - name: Prettier
-        run: yarn run prettier:check
+        run: |
+          yarn install
+          yarn run prettier:check
 
   deploy:
     needs: [test, prettier]
