@@ -11,7 +11,7 @@ module.exports = {
             ref: 'origin/master',
             repo: 'git@github.com:hannah10e/hello-world.git',
             path: "/home/dev/sand/hello-world",
-            'post-deploy': "pm2 start ecosystem.config.js"
+            'post-deploy': "yarn && pm2 start ecosystem.config.js"
         }
     }
 }
