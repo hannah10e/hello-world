@@ -1,10 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="d2e5ffa7-fa6a-4278-a4d1-f92953a66788" name="Changes" comment="added deploy action tests">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/app.js" afterDir="false" />
-    </list>
+    <list default="true" id="d2e5ffa7-fa6a-4278-a4d1-f92953a66788" name="Changes" comment="added deploy action tests" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -62,34 +59,7 @@
       <workItem from="1634145640916" duration="10842000" />
       <workItem from="1634162251859" duration="2793000" />
       <workItem from="1634223722361" duration="5878000" />
-    </task>
-    <task id="LOCAL-00001" summary="initial commit">
-      <created>1633902669494</created>
-      <option name="number" value="00001" />
-      <option name="presentableId" value="LOCAL-00001" />
-      <option name="project" value="LOCAL" />
-      <updated>1633902669494</updated>
-    </task>
-    <task id="LOCAL-00002" summary="updated config">
-      <created>1633983418769</created>
-      <option name="number" value="00002" />
-      <option name="presentableId" value="LOCAL-00002" />
-      <option name="project" value="LOCAL" />
-      <updated>1633983418769</updated>
-    </task>
-    <task id="LOCAL-00003" summary="updated config">
-      <created>1633983661525</created>
-      <option name="number" value="00003" />
-      <option name="presentableId" value="LOCAL-00003" />
-      <option name="project" value="LOCAL" />
-      <updated>1633983661525</updated>
-    </task>
-    <task id="LOCAL-00004" summary="updated config">
-      <created>1633984798328</created>
-      <option name="number" value="00004" />
-      <option name="presentableId" value="LOCAL-00004" />
-      <option name="project" value="LOCAL" />
-      <updated>1633984798328</updated>
+      <workItem from="1634313208184" duration="471000" />
     </task>
     <task id="LOCAL-00005" summary="updated config">
       <created>1633986267405</created>
@@ -406,7 +376,35 @@
       <option name="project" value="LOCAL" />
       <updated>1634228011577</updated>
     </task>
-    <option name="localTasksCounter" value="50" />
+    <task id="LOCAL-00050" summary="added deploy action tests">
+      <created>1634313225401</created>
+      <option name="number" value="00050" />
+      <option name="presentableId" value="LOCAL-00050" />
+      <option name="project" value="LOCAL" />
+      <updated>1634313225402</updated>
+    </task>
+    <task id="LOCAL-00051" summary="added deploy action tests">
+      <created>1634313239455</created>
+      <option name="number" value="00051" />
+      <option name="presentableId" value="LOCAL-00051" />
+      <option name="project" value="LOCAL" />
+      <updated>1634313239456</updated>
+    </task>
+    <task id="LOCAL-00052" summary="added deploy action tests">
+      <created>1634313491779</created>
+      <option name="number" value="00052" />
+      <option name="presentableId" value="LOCAL-00052" />
+      <option name="project" value="LOCAL" />
+      <updated>1634313491779</updated>
+    </task>
+    <task id="LOCAL-00053" summary="added deploy action tests">
+      <created>1634313743082</created>
+      <option name="number" value="00053" />
+      <option name="presentableId" value="LOCAL-00053" />
+      <option name="project" value="LOCAL" />
+      <updated>1634313743082</updated>
+    </task>
+    <option name="localTasksCounter" value="54" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
