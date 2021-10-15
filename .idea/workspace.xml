@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="d2e5ffa7-fa6a-4278-a4d1-f92953a66788" name="Changes" comment="added deploy action tests" />
+    <list default="true" id="d2e5ffa7-fa6a-4278-a4d1-f92953a66788" name="Changes" comment="added deploy action tests">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -59,14 +61,7 @@
       <workItem from="1634145640916" duration="10842000" />
       <workItem from="1634162251859" duration="2793000" />
       <workItem from="1634223722361" duration="5878000" />
-      <workItem from="1634313208184" duration="471000" />
-    </task>
-    <task id="LOCAL-00005" summary="updated config">
-      <created>1633986267405</created>
-      <option name="number" value="00005" />
-      <option name="presentableId" value="LOCAL-00005" />
-      <option name="project" value="LOCAL" />
-      <updated>1633986267405</updated>
+      <workItem from="1634313208184" duration="1171000" />
     </task>
     <task id="LOCAL-00006" summary="updated config">
       <created>1633990944314</created>
@@ -404,7 +399,14 @@
       <option name="project" value="LOCAL" />
       <updated>1634313743082</updated>
     </task>
-    <option name="localTasksCounter" value="54" />
+    <task id="LOCAL-00054" summary="added deploy action tests">
+      <created>1634314026736</created>
+      <option name="number" value="00054" />
+      <option name="presentableId" value="LOCAL-00054" />
+      <option name="project" value="LOCAL" />
+      <updated>1634314026736</updated>
+    </task>
+    <option name="localTasksCounter" value="55" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
