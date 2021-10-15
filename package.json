@@ -19,5 +19,8 @@
   "homepage": "https://github.com/hannah10e/hello-world#readme",
   "devDependencies": {
     "prettier": "2.3.2"
+  },
+  "dependencies": {
+    "express": "^4.17.1"
   }
 }
